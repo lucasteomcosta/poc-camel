@@ -9,8 +9,9 @@ import com.processar.pedidos.jobpld.entity.Pedido;
 public class ProcessarGraylistService {
 	
 	public void processar(@Body Pedido pedido) {
-		System.out.println(" ---> Processar GrayList");
-		System.out.println(pedido.getEvento());
+		System.out.println(" ------- Processar GrayList  ------- ");
+		System.out.println("Número Evento: " + pedido.getEvento());
+		System.out.println("Situação pedido: " + pedido.getSituacao());
 	}
 
 }

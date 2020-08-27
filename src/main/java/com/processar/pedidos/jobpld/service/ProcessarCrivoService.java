@@ -9,8 +9,10 @@ import com.processar.pedidos.jobpld.entity.Pedido;
 public class ProcessarCrivoService {
 	
 	public void processar(@Body Pedido pedido) {
-		System.out.println("  Processar Crivo");
-		System.out.println(pedido.getEvento());
+		System.out.println(" ------- Processar Crivo  ------- ");
+		System.out.println("Número Evento: " + pedido.getEvento());
+		System.out.println("Situação pedido: " + pedido.getSituacao());
+		System.out.println("------> Simulando erro");
 		pedido = null;
 		pedido.getEvento();
 	}

@@ -9,8 +9,10 @@ import com.processar.pedidos.jobpld.entity.Pedido;
 public class ProcessarRecebidosService {
 	
 	public void processar(Exchange exchange) {
-		System.out.println("  Processar Recebidos Exchange");
-		System.out.println(exchange.getIn().getBody(Pedido.class).getEvento());
+		System.out.println(" ------- Processar Recebidos ---> Usando Exchange  ------- ");
+		Pedido pedido = exchange.getIn().getBody(Pedido.class);
+		System.out.println("Número Evento: " + pedido.getEvento());
+		System.out.println("Situação pedido: " + pedido.getSituacao());
 	}
 
 }

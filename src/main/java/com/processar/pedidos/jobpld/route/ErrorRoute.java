@@ -9,7 +9,10 @@ public class ErrorRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
     	
-    	from("direct:error").log("ERRO: ${exception}");
+    	System.out.println(" ------- Erro Capturado  ------- ");
+		
+    	
+    	from("direct:error").log("TRATAMENTO DE ERRO: ${exception}");
     	
     }
 }
